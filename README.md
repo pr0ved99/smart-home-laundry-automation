@@ -1,34 +1,7 @@
 # 🧺 Smart Home Laundry Automation System
 **Turtlebot3와 Dobot을 활용한 무인 세탁물 운반 및 분류 자동화 솔루션** 
 
-## 🏗️ 시스템 아키텍처 (System Architecture)
-
-```mermaid
-graph TD
-    subgraph "Control Center (Web)"
-        Remote[Reflex Dashboard]
-    end
-
-    subgraph "Mobile Platform"
-        TB[Turtlebot3 Waffle Pi]
-        PiCam[Pi Camera v2]
-        STM[STM32 - Custom Gripper]
-    end
-
-    subgraph "Sorting Station"
-        CV[Conveyor Belt]
-        RS[RealSense D435]
-        DB[Dobot Magician]
-    end
-
-    %% Communication Lines
-    Remote <-->|ROS2 Topic| TB
-    TB ---|UART Serial 115200| STM
-    PiCam -->|ROS2 Topic| TB
-    TB -->|TCP/IP Socket 65432| CV
-    RS -->|Vision Data| DB
-    CV -->|Status Feedback| Remote
-```
+---
 
 ## 🚀 프로젝트 개요 (Overview)
 * **목표**: 주거 공간 내 세탁물 관리의 번거로움 해소 및 가사 노동 무인화 요구 증대 대응 .
@@ -37,6 +10,8 @@ graph TD
     * LiDAR 데이터 전처리 및 33cm 반경 정밀 튜닝 기반 실내 고속 자율 주행 달성 .
     * 직접 학습시킨 YOLOv8 nano 모델 기반 객체 인식 정확도 99.5% 확보 .
     * ROS2 Topic과 TCP/IP Socket 통신을 결합한 이기종 하드웨어 간 통합 제어 구현 .
+
+---
 
 ## 🎥 시연 영상 (Demonstration)
 [![Smart Home Laundry Automation System](https://img.youtube.com/vi/VeqI1FQXKFw/0.jpg)](https://www.youtube.com/watch?v=VeqI1FQXKFw)
@@ -70,6 +45,36 @@ graph TD
 * **AI/Vision**: YOLOv8 nano , OpenCV 
 * **Web**: Reflex (Full-stack Web Framework) 
 
+## 🏗️ 시스템 아키텍처 (System Architecture)
+
+```mermaid
+graph TD
+    subgraph "Control Center (Web)"
+        Remote[Reflex Dashboard]
+    end
+
+    subgraph "Mobile Platform"
+        TB[Turtlebot3 Waffle Pi]
+        PiCam[Pi Camera v2]
+        STM[STM32 - Custom Gripper]
+    end
+
+    subgraph "Sorting Station"
+        CV[Conveyor Belt]
+        RS[RealSense D435]
+        DB[Dobot Magician]
+    end
+
+    %% Communication Lines
+    Remote <-->|ROS2 Topic| TB
+    TB ---|UART Serial 115200| STM
+    PiCam -->|ROS2 Topic| TB
+    TB -->|TCP/IP Socket 65432| CV
+    RS -->|Vision Data| DB
+    CV -->|Status Feedback| Remote
+```
+
+---
 ## ⚙️ 설치 및 실행 방법 (Installation & Setup)
 
 ### 1. 워크스페이스 빌드 

@@ -1,0 +1,20 @@
+# 🐍 Python 환경 관련
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 🚀 Reflex/Web 관련
+.web/
+assets/node_modules/
+
+# ⚙️ OS 및 IDE 관련
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 📦 빌드 및 배포 관련
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,4 @@
+Platform, Mini Lift, MG90S Micro Servo by fastmike75 on Thingiverse: https://www.thingiverse.com/thing:531693
+
+Summary:
+Messing around with the tank and made this little mini lift. All I could think of was how cool this would be to use with Hot Wheels or Matchbox cars. Uses #4x1/4" and #4x3/8" sheet metal screws and #15 brad nails to put together. Platform is 2" x 2 7/8" and everything fits under it when lifted. Platform moves .300" (top of platform) to 2.200" fully lifted. Uses MG90S Tower Pro Servo. Has a servo adjuster to get the right gear mess. Quick build, but lots of filing and fitting. Have fun!Here is a video of it working https://www.youtube.com/watch?v=aSNia01SjYs  
